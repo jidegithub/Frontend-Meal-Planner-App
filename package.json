@@ -1,0 +1,17 @@
+{
+  "name": "meal-planner",
+  "version": "1.0.0",
+  "description": "meal planner app",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/main.css -w"
+  },
+  "author": "jide",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  }
+}

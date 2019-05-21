@@ -1,0 +1,22 @@
+{
+    "cSpell.words": [
+        "cookdate",
+        "flintstone",
+        "latol",
+        "lator",
+        "multipart"
+    ],
+    "cSpell.ignoreWords": [
+        "d",
+        "dw",
+        "keyyxf",
+        "mcpy",
+        "n",
+        "zrc"
+    ],
+    "workbench.colorCustomizations": {
+        "activityBar.background": "#0E1590",
+        "titleBar.activeBackground": "#131ECA",
+        "titleBar.activeForeground": "#FBFCFF"
+    }
+}

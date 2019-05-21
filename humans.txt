@@ -1,0 +1,17 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    sabur hammed -- team-member -- <twitter>
+    dauda kehinde -- team-member -- <twitter>
+    olutola jide -- team-member -- <twitter>
+
+
+# THANKS
+
+    <name>
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5, JAVASCRIPT, API
