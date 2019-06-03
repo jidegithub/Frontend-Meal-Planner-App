@@ -11,9 +11,7 @@ const opt = {
 function populate() {
   axios.get('/planner')
     .then((response) => {
-      //console.log(response.data)
       let plan = response.data.records;
-      //console.log(plan)
       let output = '';
       plan.forEach(info => {
         output +=
@@ -66,7 +64,6 @@ createForm.addEventListener('submit', (event) => {
     fields: newEntry,
     "typecast": true
   }).then((response) => {
-    console.log(response)
     items.unshift(newEntry);
     console.log(items)
     alert(`successfully added 😆!`);
@@ -92,8 +89,7 @@ function runSearch() {
         let mealName = meal.fields.name
         return !!mealName.match(regExp)
       })
-      console.log(searchResult)
-
+      
       const resultArr = searchResult.map(result => (
         `
         <figure class="food--img-container">
@@ -110,7 +106,7 @@ function runSearch() {
 }
 
 clear.addEventListener('click', populate);
-
+console.clear()
 
 
 
