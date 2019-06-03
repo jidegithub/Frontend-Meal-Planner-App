@@ -48,14 +48,16 @@
       </form>
       
       <form action="GET" id="search-form">
-        <input type="text"class="search">
-        <input type="button" value="submit" id="submit">
+        <input type="text" id="search">
+        <input type="button" value="submit" id="submit" onclick='runSearch()'>
         <input type="button" value="clear" id="clear">
       </form>
     </header>
+    
       
       <main class="content">
         <figure class="food--img-container">
+          <div class="category">dinner</div>
           <img src="https://placehold.it/200" alt="" class="food--img food--img-1">
           <h3>Food Title</h3>
           <a href="/">view recipe</a>
@@ -63,6 +65,7 @@
         </figure>
 
         <figure class="food--img-container">
+          <div class="category">dinner</div>
           <img src="https://placehold.it/200" alt="" class="food--img food--img-2">
           <h3>Food Title</h3>
           <a href="/">view recipe</a>
@@ -70,35 +73,15 @@
         </figure>
 
         <figure class="food--img-container">
+          <div class="category">dinner</div>
           <img src="https://placehold.it/200" alt="" class="food--img food--img-3">
           <h3>Food Title</h3>
           <a href="/">view recipe</a>
           <h5>Monday - 5th December, 2085</h5>
         </figure>
-
-        <figure class="food--img-container">
-          <img src="https://placehold.it/200" alt="" class="food--img food--img-4">
-          <h3>Food Title</h3>
-          <a href="/">view recipe</a>
-          <h5>Monday - 5th December, 2085</h5>
-        </figure>
-
-        <figure class="food--img-container">
-          <img src="https://placehold.it/200" alt="" class="food--img food--img-5">
-          <h3>Food Title</h3>
-          <a href="/">view recipe</a>
-          <h5>Monday - 5th December, 2085</h5>
-        </figure>
-
-        <figure class="food--img-container">
-          <img src="https://placehold.it/200" alt="" class="food--img food--img-6">
-          <h3>Food Title</h3>
-          <a href="/">view recipe</a>
-          <h5>Monday - 5th December, 2085</h5>
-        </figure>
-        
       </main>
     </div>
+    <div id="list"></div>
     
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script> 
     <script src="js/main.js"></script>

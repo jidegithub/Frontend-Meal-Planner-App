@@ -3,7 +3,7 @@
 
 # TEAM
 
-    sabur hammed -- team-member -- <twitter>
+    sabur ahmed -- team-member -- <twitter>
     dauda kehinde -- team-member -- <twitter>
     olutola jide -- team-member -- <twitter>
 

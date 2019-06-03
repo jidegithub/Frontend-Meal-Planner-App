@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
+        "airtable",
         "cookdate",
         "flintstone",
         "latol",
@@ -18,5 +19,6 @@
         "activityBar.background": "#0E1590",
         "titleBar.activeBackground": "#131ECA",
         "titleBar.activeForeground": "#FBFCFF"
-    }
+    },
+    "liveServer.settings.port": 5501
 }

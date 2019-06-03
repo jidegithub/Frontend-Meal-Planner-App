@@ -43,6 +43,19 @@ body {
   position: relative;
 }
 
+a:not([class]) {
+  color: #6DFBA1;
+  text-decoration: none;
+}
+
+a:not([class]):hover {
+  color: #03c24c;
+}
+
+a[class]:active {
+  color: #E64C4C;
+}
+
 header.header {
   color: white;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/header-bg.jpeg);
@@ -91,6 +104,20 @@ main.content {
   main.content {
     margin-top: 9rem;
   }
+}
+
+main.content h3 {
+  margin-top: 8px;
+  color: #b2bdba;
+}
+
+main.content a {
+  margin-top: 8px;
+}
+
+main.content h5 {
+  margin-top: 8px;
+  color: #b2bdba;
 }
 
 img.food--img {
@@ -201,6 +228,7 @@ form#search-form {
 form#search-form input.search {
   height: 5rem;
   color: black;
+  text-indent: 8px;
 }
 
 form#search-form input[value="submit"] {

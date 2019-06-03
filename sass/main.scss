@@ -52,6 +52,17 @@ body{
     background-color: darkslategrey;
     position: relative;
 }
+a:not([class]){
+    color: #6DFBA1;
+    text-decoration: none;
+  }
+  a:not([class]):hover{
+    color: #03c24c;
+  }
+  a[class]:active{
+    color: #E64C4C;
+  }
+  
 header.header{
     color: rgba(255,255,255,1);
     background: linear-gradient(
@@ -78,6 +89,9 @@ h1.heading{
         font-size: 5rem;
     }
 }
+figure.food--img-container{
+    position: relative;
+}
 main.content{
     margin-top: 7rem;
     padding: 5rem 8rem;
@@ -85,8 +99,30 @@ main.content{
     grid-gap: 3rem;
     grid-template-rows: repeat(2, 2fr);
     grid-template-columns:repeat(3, 1fr);
+    position: relative;
     @include respond (tab-land){
         margin-top: 9rem;
+    }
+    h3{
+    margin-top: 8px;
+    color: rgb(178, 189, 186);            
+    }
+    a{
+    margin-top: 8px;        
+    }
+    h5{
+        margin-top: 8px;
+        color: rgb(178, 189, 186); 
+    }
+    & .category{
+        position: absolute;
+        left: 80%;
+        top: 12%;
+        transform: translate(-50%, -50%);
+        color: white;
+        background-color:darkslategrey;
+        // #5643fa;
+        padding: 8px;
     }
 }
 img.food--img{
@@ -169,9 +205,10 @@ form#search-form{
     @include respond(phone){
         margin-top: 58rem;
     }
-    & input.search{
+    & input#search{
         height: 5rem;
         color: black;
+        text-indent: 8px;
     }
 
     & input[value="submit"]{

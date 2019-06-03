@@ -36,6 +36,16 @@ body {
   background-color: darkslategrey;
   position: relative; }
 
+a:not([class]) {
+  color: #6DFBA1;
+  text-decoration: none; }
+
+a:not([class]):hover {
+  color: #03c24c; }
+
+a[class]:active {
+  color: #E64C4C; }
+
 header.header {
   color: white;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header-bg.jpeg);
@@ -59,16 +69,36 @@ h1.heading {
       width: 102%;
       font-size: 5rem; } }
 
+figure.food--img-container {
+  position: relative; }
+
 main.content {
   margin-top: 7rem;
   padding: 5rem 8rem;
   display: grid;
   grid-gap: 3rem;
   grid-template-rows: repeat(2, 2fr);
-  grid-template-columns: repeat(3, 1fr); }
+  grid-template-columns: repeat(3, 1fr);
+  position: relative; }
   @media only screen and (max-width: 75em) {
     main.content {
       margin-top: 9rem; } }
+  main.content h3 {
+    margin-top: 8px;
+    color: #b2bdba; }
+  main.content a {
+    margin-top: 8px; }
+  main.content h5 {
+    margin-top: 8px;
+    color: #b2bdba; }
+  main.content .category {
+    position: absolute;
+    left: 80%;
+    top: 12%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: darkslategrey;
+    padding: 8px; }
 
 img.food--img {
   border: 1px solid rgba(167, 162, 162, 0.7); }
@@ -141,9 +171,10 @@ form#search-form {
   @media only screen and (max-width: 37.5em) {
     form#search-form {
       margin-top: 58rem; } }
-  form#search-form input.search {
+  form#search-form input#search {
     height: 5rem;
-    color: black; }
+    color: black;
+    text-indent: 8px; }
   form#search-form input[value="submit"] {
     color: #222;
     height: 5rem;
