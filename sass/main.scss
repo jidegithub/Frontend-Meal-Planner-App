@@ -83,7 +83,7 @@ h1.heading{
     font-size: 5rem;
     @include respond(tab-port){
         position: relative;
-        bottom: 6rem;
+        bottom: 8rem;
         text-align: center;
         width: 102%;
         font-size: 5rem;
@@ -93,8 +93,8 @@ figure.food--img-container{
     position: relative;
 }
 main.content{
-    margin-top: 7rem;
-    padding: 5rem 8rem;
+    margin-top: 5rem;
+    padding: 5rem 3rem;
     display: grid;
     grid-gap: 3rem;
     grid-template-rows: repeat(2, 2fr);
@@ -102,7 +102,7 @@ main.content{
     justify-content: center;
     position: relative;
     @include respond (tab-land){
-        margin-top: 9rem;
+        margin-top: 5rem;
     }
     h3{
     margin-top: 8px;
@@ -154,7 +154,6 @@ form#create-form{
     @include respond(phone){
         top: 42rem; 
     }
-
     & input{
     width: 100%;
     margin-bottom: 1rem;
@@ -174,7 +173,6 @@ form#create-form{
         border: solid thin #fff;
         background: none;
         height: 3.5rem;
-
         & option{
             background-color: darkslategrey;
             text-indent: 5px;
@@ -191,101 +189,35 @@ form#create-form{
 }
 
 form#search-form{
-    padding: 3rem 0;
     font-family: 'lator';
-    margin-top:15.5rem;
+    margin-top:8.5rem;
+    margin-left: 2.5rem;
+    display: flex;
+    justify-content: flex-start;
     @include respond (tab-land){
-        margin-top:10.5rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    @include respond(tab-port){
-        margin-top: 43rem;
-        text-align: center;
-    }
-    @include respond(phone){
-        margin-top: 58rem;
-    }
+        margin-left: 1.7rem;
+        justify-content: center;
+    } 
     & input#search{
         height: 5rem;
         color: black;
         text-indent: 8px;
     }
 
-    & input[value="submit"]{
+    & input#submit{
         color: #222;
         height: 5rem;
         width: 10rem;
+        margin-left: 7px;
     }
-    & input[value="clear"]{
+    & input#clear{
         color: rgb(175, 0, 0);
         height: 5rem;
         width: 10rem;
+        margin-left: 7px;
     }
 }
 
-@media (min-width:601px) and (max-width:619px){
-    form#search-form{
-        margin-top: 40rem;
-        font-size: 15px;
-    }
-}
-@media (min-width:320px) and (max-width:368px){
-    form#search-form{
-        margin-top: 42rem;
-        font-size: 15px;
-    }
-}
-
-@media (min-width:369px) and (max-width:467px){
-    form#search-form{
-        width: 350px;
-        padding-left: 0;
-        padding-right: 0;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        margin-top: 7rem;
-        font-size: 15px;
-        input#submit{
-         display: inline-block;   
-        }
-        input#clear{
-            display: inline-block;
-        }
-    }
-}
-
-@media (min-width:272px) and (max-width:319px){
-    form#search-form{
-        // width: 250px;
-        padding-left: 0;
-        padding-right: 0;
-        position: absolute;
-        top: 12%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-
-@media (min-width:37.5625em) and (max-width:38.6875em){
-    form.search-form{
-        width: 25rem;
-        margin-top: 40rem;
-        & input[value="submit"]{
-            height: 4rem;
-            width: 10rem;
-            margin-top: 5px;
-        }
-        & input[value="clear"]{
-            height: 4rem;
-            width: 10rem;
-            margin-top: 5px;
-        }
-    }     
-}
 @media (min-width:29.25em) and (max-width:37.1875em){
     header.header{
         padding: 5rem;
@@ -298,24 +230,29 @@ form#search-form{
     header.header{
         height: 110vh
     }
-    form.search-form{
-        width: 25rem;
-        //margin-top: 48rem; 
-    }
     main.content{
-        padding: 5rem 2rem;
-    }
-    main.content{
-        margin-top: 15rem;
+        margin-top: 5rem;
         padding: 2px 8px;
     }
 }
-@media (min-width:17em) and (max-width:23em){
-    form.search-form{
-        width: 25rem;
-        margin-top: 43rem; 
+@media (max-width:320px){
+    form#search-form{
+        display: block;
+        width: 184px;
+        margin: 0 auto;
+        margin-top: 25px;
+        & input#submit{
+            display: inline-block;        
+        }
+        & input#search{
+        margin-bottom: 5px;      
+        }
+        & input#clear{
+        display: inline-block;
+        }
     }
 }
+
 
 
 
