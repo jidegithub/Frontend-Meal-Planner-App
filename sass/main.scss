@@ -1,11 +1,14 @@
-@font-face{
-    font-family: 'latol';
-    src: url(../fonts/Lato-Light.ttf);
-    font-weight: 100; } 
-@font-face{
-    font-family: 'lator';
-    src: url(../fonts/Lato-Regular.ttf);
-    font-weight: 100; }
+@font-face {
+  font-family: 'latol';
+  src: url(../fonts/Lato-Light.ttf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'lator';
+  src: url(../fonts/Lato-Regular.ttf);
+  font-weight: 100;
+}
 
 // MEDIA QUERY MANAGER
 /*
@@ -27,241 +30,288 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 
 @mixin respond($breakpoint) {
-    @if $breakpoint == phone {
-        @media only screen and (max-width: 37.5em) { @content };    //600px
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 37.5em) {
+      @content
     }
-    @if $breakpoint == tab-port {
-        @media only screen and (max-width: 56.25em) { @content };     //900px
+
+    ; //600px
+  }
+
+  @if $breakpoint==tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content
     }
-    @if $breakpoint == tab-land {
-        @media only screen and (max-width: 75em) { @content };    //1200px
+
+    ; //900px
+  }
+
+  @if $breakpoint==tab-land {
+    @media only screen and (max-width: 75em) {
+      @content
     }
-    @if $breakpoint == big-desktop {
-        @media only screen and (min-width: 112.5em) { @content };    //1800
+
+    ; //1200px
+  }
+
+  @if $breakpoint==big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content
     }
-}    
+
+    ; //1800
+  }
+}
 
 html {
-    color: #222;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    @include respond(phone){
-        font-size: 50%;
-    }
+  color: #222;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
 }
-body{
-    background-color: darkslategrey;
+
+body {
+  background-color: darkslategrey;
+  position: relative;
+  overflow-x: hidden;
+}
+
+a:not([class]) {
+  color: #6DFBA1;
+  text-decoration: none;
+}
+
+a:not([class]):hover {
+  color: #03c24c;
+}
+
+a[class]:active {
+  color: #E64C4C;
+}
+
+header.header {
+  color: rgba(255, 255, 255, 1);
+  background: linear-gradient(rgba(0, 0, 0, .6),
+      rgba(0, 0, 0, .6)),
+    url(../img/header-bg.jpeg);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 70vh;
+  padding: 4rem;
+
+  @include respond(tab-port) {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    height: 110vh;
+  }
+}
+
+h1.heading {
+  width: 21%;
+  font-size: 5rem;
+
+  @include respond(tab-port) {
     position: relative;
-}
-a:not([class]){
-    color: #6DFBA1;
-    text-decoration: none;
-  }
-  a:not([class]):hover{
-    color: #03c24c;
-  }
-  a[class]:active{
-    color: #E64C4C;
-  }
-  
-header.header{
-    
-    color: rgba(255,255,255,1);
-    background: linear-gradient(
-        rgba(0, 0, 0, .6), 
-        rgba(0, 0, 0, .6)),
-        url(../img/header-bg.jpeg);
-    background-size: cover;
-    background-position: center;
-    width: 100vw;
-    height: 70vh;
-    padding: 4rem;
-    @include respond(tab-port){
-        display: flex;
-        flex-direction: column;
-        
-        align-items: center;
-        height: 110vh;           
-    }   
-}
-h1.heading{
-    width: 21%;
+    bottom: 3rem;
+    text-align: center;
+    width: 102%;
     font-size: 5rem;
-    @include respond(tab-port){
-        position: relative;
-        bottom: 3rem;
-        text-align: center;
-        width: 102%;
-        font-size: 5rem;
-    }
+  }
+
+  @include respond(phone) {
+    bottom: 0;
+  }
 }
-figure.food--img-container{
-    position: relative;
+
+figure.food--img-container {
+  position: relative;
 }
-main.content{
+
+main.content {
+  margin-top: 5rem;
+  padding: 3rem 3rem;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-rows: repeat(2, 2fr);
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  position: relative;
+
+  @include respond (tab-land) {
     margin-top: 5rem;
-    padding: 3rem 3rem;
-    display: grid;
-    grid-gap: 3rem;
-    grid-template-rows: repeat(2, 2fr);
-    grid-template-columns:repeat(3, 1fr);
-    justify-content: center;
-    position: relative;
-    @include respond (tab-land){
-        margin-top: 5rem;
-    }
-    h3{
+  }
+
+  h3 {
     margin-top: 8px;
-    color: rgb(178, 189, 186);            
-    }
-    a{
-    margin-top: 8px;        
-    }
-    h5{
-        margin-top: 8px;
-        color: rgb(178, 189, 186); 
-    }
-    & .category{
-        position: absolute;
-        left: 80%;
-        top: 12%;
-        transform: translate(-50%, -50%);
-        color: white;
-        background-color:darkslategrey;
-        // #5643fa;
-        padding: 8px;
-    }
+    color: rgb(178, 189, 186);
+  }
+
+  a {
+    margin-top: 8px;
+  }
+
+  h5 {
+    margin-top: 8px;
+    color: rgb(178, 189, 186);
+  }
+
+  & .category {
+    position: absolute;
+    left: 80%;
+    top: 12%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: darkslategrey;
+    // #5643fa;
+    padding: 8px;
+  }
 }
-img.food--img{
-    border: 1px solid rgba(167, 162, 162, .7); 
-} 
-form#create-form{
-    position: absolute; 
-    width: 30%;
-    right: 9rem;
-    top: 7.1rem;
-    margin-bottom: 20px;
-    background-color: rgba(38, 78, 78, 0.37);
-    border: 1px solid rgb(18, 65, 65);
-    padding: 1.5rem 2rem;
-    font-family: 'lator';
-    color:rgba(255,255,255,1);
-    @include respond (tab-land){
-        top: 1.2rem;
-        right: 5rem;
-    }
-    @include respond(tab-port){
-        width: 80%;
-        left: 50%;
-        right: 50%;
-        transform: translate(-50%, -50%);
-        top: 30rem;
-        text-align: center;
-    }
-    @include respond(phone){
-        top: 40rem; 
-    }
-    & input{
+
+img.food--img {
+  border: 1px solid rgba(167, 162, 162, .7);
+}
+
+form#create-form {
+  position: absolute;
+  width: 30%;
+  right: 9rem;
+  top: 7.1rem;
+
+  background-color: rgba(38, 78, 78, 0.37);
+  border: 1px solid rgb(18, 65, 65);
+  padding: 1.5rem 2rem;
+  font-family: 'lator';
+  color: rgba(255, 255, 255, 1);
+
+  @include respond (tab-land) {
+    top: 1.2rem;
+    right: 5rem;
+  }
+
+  @include respond(tab-port) {
+    width: 80%;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%, -50%);
+    top: 30rem;
+    text-align: center;
+  }
+
+  @include respond(phone) {
+    top: 40rem;
+  }
+
+  & input {
     width: 100%;
     margin-bottom: 1rem;
     height: 3.5rem;
     border: solid thin rgb(161, 212, 212);
     background-color: darkslategrey;
     text-indent: 5px;
-}
-    & #category{
-        display: block;
-        width: 100%;
-        -moz-appearance: none;
-        -webkit-appearance: none;
-        text-indent: 1px;
-        text-overflow: '';
-        -ms-text-overflow: '';
-        border: solid thin #fff;
-        background: none;
-        height: 3.5rem;
-        & option{
-            background-color: darkslategrey;
-            text-indent: 5px;
-        }
-    }
+  }
 
-    & button:hover{
-        background-color: rgb(6, 61, 51);
-        transform: translateY(-2px);
-    }
-    & button:active{
-        background-color: rgb(25, 139, 118);
-    }
-}
+  & #category {
+    display: block;
+    width: 100%;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+    -ms-text-overflow: '';
+    border: solid thin #fff;
+    background: none;
+    height: 3.5rem;
 
-form#search-form{
-    font-family: 'lator';
-    margin-top:15.5rem;
-    margin-left: 2.5rem;
-    display: flex;
-    justify-content: flex-start;
-    @include respond (tab-land){
-        margin-left: 1.7rem;
-        justify-content: center;
-    } 
-    & input#search{
-        height: 5rem;
-        color: black;
-        text-indent: 8px;
+    & option {
+      background-color: darkslategrey;
+      text-indent: 5px;
     }
+  }
 
-    & input#submit{
-        color: #222;
-        height: 5rem;
-        width: 10rem;
-        margin-left: 7px;
-    }
-    & input#clear{
-        color: rgb(175, 0, 0);
-        height: 5rem;
-        width: 10rem;
-        margin-left: 7px;
-    }
+  & button:hover {
+    background-color: rgb(6, 61, 51);
+    transform: translateY(-2px);
+  }
+
+  & button:active {
+    background-color: rgb(25, 139, 118);
+  }
 }
 
-@media (min-width:29.25em) and (max-width:37.1875em){
-    header.header{
-        padding: 3rem;
-    }
-    main.content{
-        padding: 5rem 2rem;
-    }
+form#search-form {
+  font-family: 'lator';
+  margin-top: 5.5rem;
+  margin-left: 2.5rem;
+  display: flex;
+  justify-content: flex-start;
+
+  @include respond (tab-land) {
+    margin-left: 0rem;
+  }
+
+  @include respond (tab-port) {
+    justify-content: center;
+  }
+
+  & input#search {
+    height: 5rem;
+    color: black;
+    text-indent: 8px;
+  }
+
+  & input#submit {
+    color: #222;
+    height: 5rem;
+    width: 10rem;
+    margin-left: 17px;
+  }
+
+  & input#clear {
+    color: rgb(175, 0, 0);
+    height: 5rem;
+    width: 10rem;
+    margin-left: 7px;
+  }
 }
-@media (min-width:17em) and (max-width:29.1875em){
-    header.header{
-        height: 100vh;
-        padding:3rem;
-    }
-    main.content{
-        margin-top: 5rem;
-        padding: 2px 8px;
-    }
-}
-@media (max-width:320px){
-    form#search-form{
-        display: block;
-        width: 184px;
-        margin: 0 auto;
-        margin-top: 25px;
-        & input#submit{
-            display: inline-block;        
-        }
-        & input#search{
-        margin-bottom: 5px;      
-        }
-        & input#clear{
-        display: inline-block;
-        }
-    }
+
+@media (max-width:465px) {
+  main.content {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+  }
 }
 
+@media (max-width:320px) {
+  form#search-form {
+    display: block;
+    width: 205px;
+    margin: 0 auto;
+    margin-top: 25px;
 
+    & input#submit {
+      display: inline-block;
+    }
 
+    & input#search {
+      margin-bottom: 5px;
+    }
 
+    & input#clear {
+      display: inline-block;
+    }
+  }
+}
 
+@media (max-width:304px) {
+  h1.heading {
+    bottom: 4rem;
+  }
 
+}

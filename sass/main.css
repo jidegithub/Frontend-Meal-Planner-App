@@ -41,6 +41,7 @@ html {
 body {
   background-color: darkslategrey;
   position: relative;
+  overflow-x: hidden;
 }
 
 a:not([class]) {
@@ -95,6 +96,12 @@ h1.heading {
     text-align: center;
     width: 102%;
     font-size: 5rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  h1.heading {
+    bottom: 0;
   }
 }
 
@@ -158,7 +165,6 @@ form#create-form {
   width: 30%;
   right: 9rem;
   top: 7.1rem;
-  margin-bottom: 20px;
   background-color: rgba(38, 78, 78, 0.37);
   border: 1px solid #124141;
   padding: 1.5rem 2rem;
@@ -230,7 +236,7 @@ form#create-form button:active {
 
 form#search-form {
   font-family: 'lator';
-  margin-top: 15.5rem;
+  margin-top: 5.5rem;
   margin-left: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -242,7 +248,12 @@ form#search-form {
 
 @media only screen and (max-width: 75em) {
   form#search-form {
-    margin-left: 1.7rem;
+    margin-left: 0rem;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  form#search-form {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -259,7 +270,7 @@ form#search-form input#submit {
   color: #222;
   height: 5rem;
   width: 10rem;
-  margin-left: 7px;
+  margin-left: 17px;
 }
 
 form#search-form input#clear {
@@ -269,30 +280,23 @@ form#search-form input#clear {
   margin-left: 7px;
 }
 
-@media (min-width: 29.25em) and (max-width: 37.1875em) {
-  header.header {
-    padding: 3rem;
-  }
+@media (max-width: 465px) {
   main.content {
-    padding: 5rem 2rem;
-  }
-}
-
-@media (min-width: 17em) and (max-width: 29.1875em) {
-  header.header {
-    height: 100vh;
-    padding: 3rem;
-  }
-  main.content {
-    margin-top: 5rem;
-    padding: 2px 8px;
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 3rem;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
 @media (max-width: 320px) {
   form#search-form {
     display: block;
-    width: 184px;
+    width: 205px;
     margin: 0 auto;
     margin-top: 25px;
   }
@@ -304,6 +308,12 @@ form#search-form input#clear {
   }
   form#search-form input#clear {
     display: inline-block;
+  }
+}
+
+@media (max-width: 304px) {
+  h1.heading {
+    bottom: 4rem;
   }
 }
 /*# sourceMappingURL=main.css.map */
