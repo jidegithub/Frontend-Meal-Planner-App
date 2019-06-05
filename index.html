@@ -18,41 +18,46 @@
         <h1 class="heading">
           meal planning app
         </h1>
-      <form id="create-form">
         <div>
-          <label>Meal name</label>
-          <input type="text" id="name" />
+          <form id="create-form">
+              <div>
+                <label>Meal name</label>
+                <input type="text" id="name" />
+              </div>
+              <div>
+                <label>Category</label>
+                <select id="category">
+                  <option>Breakfast</option>
+                  <option>Brunch</option>
+                  <option>Lunch</option>
+                  <option>Dinner</option>
+                </select>
+              </div>
+              <div>
+                <label>Recipe Link</label>
+                <input type="text" id="recipe" />
+              </div>
+              <div>
+                <label>When will you cook this meal?</label>
+                <input type="date" id="cookdate" />
+              </div>
+              <div>
+                <label>Image Link</label>
+                <input type="text" id="image" />
+              </div>
+              <button type="submit">Create Plan</button>
+          </form> 
         </div>
-        <div>
-          <label>Category</label>
-          <select id="category">
-            <option>Breakfast</option>
-            <option>Brunch</option>
-            <option>Lunch</option>
-            <option>Dinner</option>
-          </select>
-        </div>
-        <div>
-          <label>Recipe Link</label>
-          <input type="text" id="recipe" />
-        </div>
-        <div>
-          <label>When will you cook this meal?</label>
-          <input type="date" id="cookdate" />
-        </div>
-        <div>
-          <label>Image Link</label>
-          <input type="text" id="image" />
-        </div>
-        <button type="submit">Create Plan</button>
-      </form> 
+     
     </header>
-    
+    <div style="margin-top: 180px">
       <form action="/" id="search-form">
         <input type="text" id="search" placeholder="e.g jollof rice">
         <input type="button" value="submit" id="submit" onclick='runSearch()'>
         <input type="button" value="clear" id="clear">
       </form>
+    </div>
+      
       
       <main class="content">
         <figure class="food--img-container">
