@@ -58,14 +58,20 @@ a[class]:active {
 }
 
 header.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   color: white;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(../img/header-bg.jpeg);
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header-bg.jpeg);
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 70vh;
-  padding: 4rem;
+  height: 85vh;
+  padding: 3rem;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -77,6 +83,9 @@ header.header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -110,7 +119,7 @@ figure.food--img-container {
 }
 
 main.content {
-  margin-top: 5rem;
+  margin-top: 3rem;
   padding: 3rem 3rem;
   display: -ms-grid;
   display: grid;
@@ -161,10 +170,7 @@ img.food--img {
 }
 
 form#create-form {
-  position: absolute;
-  width: 30%;
-  right: 9rem;
-  top: 7.1rem;
+  width: 87%;
   background-color: rgba(38, 78, 78, 0.37);
   border: 1px solid #124141;
   padding: 1.5rem 2rem;
@@ -174,19 +180,13 @@ form#create-form {
 
 @media only screen and (max-width: 75em) {
   form#create-form {
-    top: 1.2rem;
-    right: 5rem;
+    width: 100%;
   }
 }
 
 @media only screen and (max-width: 56.25em) {
   form#create-form {
-    width: 80%;
-    left: 50%;
-    right: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    top: 30rem;
+    width: 100%;
     text-align: center;
   }
 }
@@ -236,7 +236,7 @@ form#create-form button:active {
 
 form#search-form {
   font-family: 'lator';
-  margin-top: 5.5rem;
+  margin-top: 4rem;
   margin-left: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -308,12 +308,6 @@ form#search-form input#clear {
   }
   form#search-form input#clear {
     display: inline-block;
-  }
-}
-
-@media (max-width: 304px) {
-  h1.heading {
-    bottom: 4rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

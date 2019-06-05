@@ -92,6 +92,8 @@ a[class]:active {
 }
 
 header.header {
+    display: flex;
+    justify-content: space-between;
   color: rgba(255, 255, 255, 1);
   background: linear-gradient(rgba(0, 0, 0, .6),
       rgba(0, 0, 0, .6)),
@@ -99,13 +101,13 @@ header.header {
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 70vh;
-  padding: 4rem;
+  height: 85vh;
+  padding: 3rem;
 
   @include respond(tab-port) {
     display: flex;
     flex-direction: column;
-
+    justify-content: center;
     align-items: center;
     height: 110vh;
   }
@@ -133,7 +135,7 @@ figure.food--img-container {
 }
 
 main.content {
-  margin-top: 5rem;
+  margin-top: 3rem;
   padding: 3rem 3rem;
   display: grid;
   grid-gap: 3rem;
@@ -177,11 +179,7 @@ img.food--img {
 }
 
 form#create-form {
-  position: absolute;
-  width: 30%;
-  right: 9rem;
-  top: 7.1rem;
-
+  width: 87%;
   background-color: rgba(38, 78, 78, 0.37);
   border: 1px solid rgb(18, 65, 65);
   padding: 1.5rem 2rem;
@@ -189,16 +187,11 @@ form#create-form {
   color: rgba(255, 255, 255, 1);
 
   @include respond (tab-land) {
-    top: 1.2rem;
-    right: 5rem;
+    width: 100%;
   }
 
   @include respond(tab-port) {
-    width: 80%;
-    left: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
-    top: 30rem;
+    width: 100%;
     text-align: center;
   }
 
@@ -245,7 +238,7 @@ form#create-form {
 
 form#search-form {
   font-family: 'lator';
-  margin-top: 5.5rem;
+  margin-top: 4rem;
   margin-left: 2.5rem;
   display: flex;
   justify-content: flex-start;
@@ -310,8 +303,6 @@ form#search-form {
 }
 
 @media (max-width:304px) {
-  h1.heading {
-    bottom: 4rem;
-  }
+  
 
 }
