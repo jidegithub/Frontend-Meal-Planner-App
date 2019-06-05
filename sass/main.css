@@ -71,7 +71,7 @@ header.header {
   background-position: center;
   width: 100vw;
   height: 85vh;
-  padding: 3rem;
+  padding: 1.5rem;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -83,13 +83,13 @@ header.header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 110vh;
+    height: 137vh;
   }
 }
 
@@ -100,17 +100,9 @@ h1.heading {
 
 @media only screen and (max-width: 56.25em) {
   h1.heading {
-    position: relative;
-    bottom: 3rem;
     text-align: center;
     width: 102%;
     font-size: 5rem;
-  }
-}
-
-@media only screen and (max-width: 37.5em) {
-  h1.heading {
-    bottom: 0;
   }
 }
 
