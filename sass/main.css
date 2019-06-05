@@ -64,7 +64,7 @@ header.header {
   background-position: center;
   width: 100vw;
   height: 70vh;
-  padding: 8rem;
+  padding: 4rem;
 }
 
 @media only screen and (max-width: 56.25em) {
@@ -81,7 +81,7 @@ h1.heading {
 @media only screen and (max-width: 56.25em) {
   h1.heading {
     position: relative;
-    bottom: 8rem;
+    bottom: 3rem;
     text-align: center;
     width: 102%;
     font-size: 5rem;
@@ -176,7 +176,7 @@ form#create-form {
 
 @media only screen and (max-width: 37.5em) {
   form#create-form {
-    top: 42rem;
+    top: 40rem;
   }
 }
 
@@ -260,7 +260,7 @@ form#search-form input#clear {
 
 @media (min-width: 29.25em) and (max-width: 37.1875em) {
   header.header {
-    padding: 5rem;
+    padding: 3rem;
   }
   main.content {
     padding: 5rem 2rem;
@@ -269,7 +269,8 @@ form#search-form input#clear {
 
 @media (min-width: 17em) and (max-width: 29.1875em) {
   header.header {
-    height: 110vh;
+    height: 100vh;
+    padding: 3rem;
   }
   main.content {
     margin-top: 5rem;

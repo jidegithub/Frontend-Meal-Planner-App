@@ -73,7 +73,7 @@ header.header{
     background-position: center;
     width: 100vw;
     height: 70vh;
-    padding: 8rem;
+    padding: 4rem;
     @include respond(tab-port){
         height: 110vh;           
     }   
@@ -83,7 +83,7 @@ h1.heading{
     font-size: 5rem;
     @include respond(tab-port){
         position: relative;
-        bottom: 8rem;
+        bottom: 3rem;
         text-align: center;
         width: 102%;
         font-size: 5rem;
@@ -152,7 +152,7 @@ form#create-form{
         text-align: center;
     }
     @include respond(phone){
-        top: 42rem; 
+        top: 40rem; 
     }
     & input{
     width: 100%;
@@ -220,7 +220,7 @@ form#search-form{
 
 @media (min-width:29.25em) and (max-width:37.1875em){
     header.header{
-        padding: 5rem;
+        padding: 3rem;
     }
     main.content{
         padding: 5rem 2rem;
@@ -228,7 +228,8 @@ form#search-form{
 }
 @media (min-width:17em) and (max-width:29.1875em){
     header.header{
-        height: 110vh
+        height: 100vh;
+        padding:3rem;
     }
     main.content{
         margin-top: 5rem;
